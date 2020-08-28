@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+
+        @{
+            if (User.Identity.IsAuthenticated)
+            {
+                var claims = User.Claims.ToList();
+                <p>You are currently logged in using Kerberos as @User.Identity.Name</p>
+
+                <table class="table table-sm table-bordered">
+                    <tr>
+                        <th>Subject</th>
+                        <th>Issuer</th>
+                        <th>Type</th>
+                        <th>Value</th>
+                    </tr>
+
+                    @foreach (var claim1 in @claims.OrderBy(x => x.Type))
+                    {
+                        string GroupName;
+                        if (claim1.Value.Contains("S-"))
+                        {
+                            string str = "LDAP://<SID=" + claim1.Value + ">";
+                            GroupName = new System.Security.Principal.SecurityIdentifier(claim1.Value).Translate(typeof(System.Security.Principal.NTAccount)).ToString();
+                        }
+                        else
+                        {
+                            GroupName = claim1.Value.ToString();
+                        }
+                        <tr>
+                            <td>@claim1.Subject.Name</td>
+                            <td>@claim1.Issuer</td>
+                            <td>@claim1.Type</td>
+                            <td>@GroupName</td>
+                        </tr>
+                    }
+                </table>
+            }
+
+        }
+    </div>

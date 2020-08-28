@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kerberos-Demo", "Kerberos-Demo\Kerberos-Demo.csproj", "{BC160CF5-CF56-4D17-AB1A-D40FA2AE585A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC160CF5-CF56-4D17-AB1A-D40FA2AE585A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC160CF5-CF56-4D17-AB1A-D40FA2AE585A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC160CF5-CF56-4D17-AB1A-D40FA2AE585A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC160CF5-CF56-4D17-AB1A-D40FA2AE585A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26BFA040-F9C0-40AF-9AA9-032F5F2E0318}
+	EndGlobalSection
+EndGlobal
